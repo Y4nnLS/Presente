@@ -1,0 +1,272 @@
+
+/* header */
+
+a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  li {
+    list-style-type: none;
+  }
+  
+  header {
+    background-color: #fd8a8a;
+    position: relative;
+    box-shadow: rgba(224, 18, 18, 0.75) 0px 13px 30px -12px;
+    width: 100%;
+  }
+  
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 16px;
+  }
+  
+  .brand-name {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .navbar-links {
+    display: flex;
+    gap: 16px;
+  }
+  
+  li {
+    color: #e1e1e6;
+    font-size: 20px;
+  
+    transition: color 0.1s;
+  }
+  
+  li.active,
+  li:hover {
+    color: #6b6b6b;
+  }
+  
+  li a {
+    padding: 8px;
+  }
+  
+  @media (min-width: 960px) {
+    .hide-on-desktop {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 960px) {
+    .navbar-links {
+      opacity: 0;
+      transform: translateY(-140%);
+  
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+  
+      flex-direction: column;
+      background-color: #202024;
+      box-shadow: rgb(0 0 0 / 75%) 0px 13px 30px -12px;
+      padding: 32px 0;
+      border-top: outset;
+      gap: 0;
+      z-index: 1;
+  
+      transition: 0.5s;
+    }
+  
+    .navbar-links.show {
+      opacity: 1;
+      top: 100%;
+      transform: translateY(0);
+    }
+  
+    .navbar-links li {
+      text-align: center;
+    }
+  
+    .navbar-links li a {
+      line-height: 40px;
+      width: 100%;
+      display: block;
+    }
+  
+    .menu-hamb-button {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+  
+    .btn-line {
+      width: 24px;
+      height: 3px;
+      background: #e1e1e6;
+      transition: 0.3s;
+    }
+  
+    .menu-hamb-button.isOpen .btn-line:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+  
+    .menu-hamb-button.isOpen .btn-line:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .menu-hamb-button.isOpen .btn-line:nth-child(3) {
+      transform: rotate(-45deg) translate(8px, -8px);
+    }
+  
+    .menu-overlay {
+      position: unset;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      z-index: 1;
+    }
+  
+    .menu-overlay.show {
+      position: fixed;
+    }
+  }
+  
+  /* main */
+
+  .container{
+    color: #fd8a8a;
+  }
+  .container_1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 4rem auto;
+  }
+  
+  .container_2{
+    text-align: center;
+  }
+
+  .container_1, .container_2 {
+    margin: 4rem auto; /* Define as margens automáticas */
+    width: 60%; /* Define a largura desejada */
+  }
+
+  .container_3{
+    text-align: center;
+    margin: 4rem;
+  }
+
+  /*footer*/
+
+  .container__footer{
+    color: #ffffff;
+    display: block;
+
+  }
+   footer {
+    padding: 54px 0;
+  }
+  
+  .footer {
+    background-color: #fd8a8a;
+    text-align: center;
+  }
+
+  #footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2rem;            /* altura do rodapé */
+  }
+  
+  .footer i {
+    color: #ffffff;
+    font-size: 19px;
+    background-color: white;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 10px;
+    transition: 0.2s;
+  }
+  
+  .footer i:hover {
+    color: #ffffff;
+    transform: scale(120%);
+    background-color: #af8dff;
+  }
+
+  /* Carrossel de imagens */
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 8px;
+    justify-content: center;
+  }
+  
+  .card {
+    border: 1px solid #ccc;
+    margin: 0 50px 20px 10px;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+  
+  }
+  
+  .top-row, .bottom-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px; /* Espaço entre as linhas */
+}
+
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: 3%;
+  }
+  
+  .hoteis-card .card-item {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  .hoteis-card .card-item p {
+    margin: 5px 0;
+    font-size: 0.9em;
+  }
+  
+  .card-info {
+    padding: 10px;
+  }
+  
+  .card-info p {
+    margin: 5px 0;
+  }
+  
+  .card:hover {
+    background-color: none;
+    margin-top: -5px;
+    transform: scale(110%);
+  }
+  
+  .ver-mais {
+    text-align: center;
+    margin: 20px;
+    /* Adicione um espaçamento superior opcional */
+  }
+  
+  .btn-ver-mais {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: #fd8a8a;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 25px;
+  }
+  
+  .btn-ver-mais:hover {
+    background-color: #f35959;
+  }
